@@ -1,5 +1,5 @@
 import { useQuery } from "graphql-hooks";
-import { StoryblokComponent } from "@storyblok/react";
+import { useStoryblokState, StoryblokComponent } from "@storyblok/react";
 import { initializeGraphQL } from "/lib/graphql-client";
 import graphQLRequest from "/lib/graphql-request";
 
@@ -19,7 +19,7 @@ const HOMEPAGE_QUERY = `
 
 const Index = () => {
   const { loading, error, data } = useQuery(HOMEPAGE_QUERY);
-  let story = data?.PageItem;
+  let story = useStoryblokState(data?.PageItem);
 
   if (error) return <div>Error loading</div>;
   if (loading) return <div>Loading</div>;

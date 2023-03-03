@@ -1,8 +1,9 @@
+import { storyblokEditable } from "@storyblok/react";
 import Image from "next/image";
 
 const Hero = ({ blok }) => {
   return (
-    <section className="relative">
+    <section {...storyblokEditable(blok)} className="relative">
       <Image
         className="absolute object-cover"
         src={blok?.background?.filename}
