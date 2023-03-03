@@ -1,8 +1,8 @@
 import { storyblokInit } from "@storyblok/react";
 import { ClientContext } from "graphql-hooks";
 import { useGraphQLClient } from "/lib/graphql-client";
-import { Hero } from "ui";
-import "../index.css";
+import Hero from "/components/sections/Hero";
+import "/index.css";
 
 const components = {
   hero: Hero,

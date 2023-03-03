@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const Hero = ({ blok }) => {
+const Hero = ({ blok }) => {
   return (
     <section className="relative">
       <Image
@@ -17,3 +17,5 @@ export const Hero = ({ blok }) => {
     </section>
   );
 };
+
+export default Hero;
